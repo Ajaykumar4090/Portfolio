@@ -264,6 +264,21 @@ section {
     width: 100%;
 }
 
+.theme-toggle {
+    font-size: 1.7rem;
+    margin-left: 3.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.theme-toggle:hover {
+    color: var(--main-color);
+}
+
+
 /* About */
 
 .about {
@@ -567,7 +582,7 @@ span {
 
 /* projects */
 .projects {
-    background-color: #081b29;
+    background-color: var(--bg-color);
 }
 
 .projects article{
@@ -619,7 +634,6 @@ span {
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
-
 
 /* contact */
 
@@ -780,6 +794,29 @@ span {
     transition-delay: calc(.3s * var(--i));
     width: 0;
 }
+
+/* Default theme (light) */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+}
+
+/* Dark theme */
+body.dark {
+    --bg-color: #081b29;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+}
+
+/* Apply the theme variables */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.3s, color 0.3s;
+}
+
+
 
 /* MediaQuery */
 
